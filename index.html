@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Today's Date</title>
+  <title>Weather Forecast</title>
 </head>
 <body>
   <h1>Today's Date</h1>
   <p id="currentDate"></p>
 
+  <h1>7-Day Weather Forecast</h1>
+  <div id="forecast"></div>
+
   <script>
+    // Display current date
     var currentDate = new Date();
     document.getElementById('currentDate').textContent = currentDate.toDateString();
+
+    // Fetch weather forecast
+    fetch(http://api.openweathermap.org/geo/1.0/zip?zip=E14,GB&appid={054cf951a1f0b39deb25b6b92bbe8626
+})
+      .then(response => response.json())
+      .then(data => {
+        const forecast = data.forecast;
+        const forecastElement = document.getElementById('forecast');
+        
+        forecast.forEach(day => {
+          const date = day.date;
+          const temperature = day.temperature;
+
+          const forecastItem = document.createElement('p');
+          forecastItem.textContent = `${date}: ${temperature}`;
+          forecastElement.appendChild(forecastItem);
+        });
+      })
+      .catch(error => {
+        console.log('Error fetching weather forecast:', error);
+      });
   </script>
 </body>
 </html>
