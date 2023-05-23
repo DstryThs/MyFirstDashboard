@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today's Date</title>
+</head>
+<body>
+  <h1>Today's Date</h1>
+  <p id="currentDate"></p>
+
+  <script>
+    var currentDate = new Date();
+    document.getElementById('currentDate').textContent = currentDate.toDateString();
+  </script>
+</body>
+</html>
