@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Weather Forecast</title>
+  <title>Current Date</title>
 </head>
 <body>
-  <h1>Today's Date</h1>
-  <p id="currentDate"></p>
-
-  <h1>7-Day Weather Forecast</h1>
-  <div id="forecast"></div>
+  <p id="date"></p>
 
   <script>
-    // Display current date
+    // Get the current date
     var currentDate = new Date();
-    document.getElementById('currentDate').textContent = currentDate.toDateString();
+
+    // Format the date as "Wednesday 5/24/2023"
+    var formattedDate = currentDate.toLocaleDateString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric' });
+
+    // Display the formatted date
+    document.getElementById('date').textContent = "Today's Date: " + formattedDate;
   </script>
 </body>
 </html>
-
