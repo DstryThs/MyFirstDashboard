@@ -6,23 +6,7 @@
 <body>
   <p id="date"></p>
 
-  
-import requests
-
-API_URL = "http://localhost:3000/api/v1/prediction/1fb8add2-6439-4b1e-b9b1-37b9b6febecb"
-
-def query(payload):
-    response = requests.post(API_URL, json=payload)
-    return response.json()
-
-output = query({
-    "question": "Hey, how are you?",
-})
-print(output)
-
-
-  
-  <script>
+    <script>
     // Get the current date
     var currentDate = new Date();
 
