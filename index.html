@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Current Date</title>
+  <title>Current Date and Time</title>
 </head>
 <body>
-  <p id="date"></p>
+  <p id="datetime"></p>
 
-    <script>
-    // Get the current date
-    var currentDate = new Date();
+  <script>
+    function updateDateTime() {
+      // Get the current date and time
+      var currentDateTime = new Date();
 
-    // Format the date as "Wednesday 5/24/2023"
-    var formattedDate = currentDate.toLocaleDateString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric' });
+      // Format the date and time as "Wednesday 5/24/2023 12:30:45 PM"
+      var formattedDateTime = currentDateTime.toLocaleString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
 
-    // Display the formatted date
-    document.getElementById('date').textContent = "Today's Date: " + formattedDate;
+      // Display the formatted date and time
+      document.getElementById('datetime').textContent = "Current Date and Time: " + formattedDateTime;
+    }
+
+    // Call the function to update date and time immediately
+    updateDateTime();
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
   </script>
 </body>
 </html>
+
