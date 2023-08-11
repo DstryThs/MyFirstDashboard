@@ -2,28 +2,34 @@
 <html>
 <head>
   <title>Current Date and Time</title>
+  <style>
+    /* Style for the container */
+    .container {
+      background: linear-gradient(to bottom, #333, #111); /* Dark gradient background */
+      color: white; /* Text color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+      width: 300px; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the container */
+      text-align: center; /* Center text */
+    }
+  </style>
 </head>
 <body>
-  <p id="datetime"></p>
+  <div class="container">
+    <p id="datetime"></p>
+  </div>
 
   <script>
     function updateDateTime() {
-      // Get the current date and time
       var currentDateTime = new Date();
-
-      // Format the date and time as "Wednesday 5/24/2023 12:30:45 PM"
       var formattedDateTime = currentDateTime.toLocaleString('en-US', { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-
-      // Display the formatted date and time
       document.getElementById('datetime').textContent = "Current Date and Time: " + formattedDateTime;
     }
 
-    // Call the function to update date and time immediately
     updateDateTime();
-
-    // Update date and time every second
     setInterval(updateDateTime, 1000);
   </script>
 </body>
 </html>
-
