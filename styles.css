@@ -7,7 +7,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 300px;
   position: absolute;
-  top: 400px; /* Adjust the top positioning as needed */
+  top: 20px; /* Adjust the top positioning as needed */
   right: 20px; /* Adjust the right positioning as needed */
   text-align: center;
 }
