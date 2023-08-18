@@ -19,3 +19,22 @@ header {
   padding: 10px;
   text-align: center;
 }
+
+/* Positioning for the header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+/* Body padding to avoid content being covered by header */
+body {
+  padding-top: 50px; /* Adjust the value as needed */
+}
+
+
