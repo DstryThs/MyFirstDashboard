@@ -6,7 +6,9 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 300px;
-  margin: 0 auto;
+  position: absolute;
+  top: 20px; /* Adjust the top positioning as needed */
+  right: 20px; /* Adjust the right positioning as needed */
   text-align: center;
 }
 
