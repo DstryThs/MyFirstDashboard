@@ -52,40 +52,6 @@
 </body>
 </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Text Input Example</title>
-</head>
-<body>
-
-<h2>Text Input</h2>
-
-<form id="textInputForm">
-  <label for="text">Enter text:</label><br>
-  <input type="text" id="text" name="text"><br>
-  <button type="button" id="submitButton">Submit</button>
-</form> 
-
-<div id="displayText"></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const textInputForm = document.getElementById("textInputForm");
-    const textInput = document.getElementById("text");
-    const submitButton = document.getElementById("submitButton");
-    const displayText = document.getElementById("displayText");
-
-    submitButton.addEventListener("click", function () {
-        const enteredText = textInput.value;
-        displayText.innerHTML = "<p>Entered Text:</p><p>" + enteredText + "</p>";
-        textInput.value = ""; // Clear the input
-    });
-});
-</script>
-
-</body>
-</html>
 
 
   
