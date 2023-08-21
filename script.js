@@ -41,5 +41,11 @@ userInput.addEventListener('input', () => {
 });
 */
 
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+  const datetimeElement = document.getElementById("datetime");
+  const now = new Date();
+  datetimeElement.textContent = now.toLocaleString();
+});
 
 
