@@ -19,3 +19,27 @@ function updateDateTime() {
 
 updateDateTime();
 
+// Get references to the elements
+const userInput = document.getElementById('userInput');
+const deleteButton = document.getElementById('deleteButton');
+
+// Add event listener to the delete button
+deleteButton.addEventListener('click', () => {
+    userInput.value = ''; // Clear the user input
+});
+
+// Optionally, you can also save the user input to local storage to remember it across sessions
+// Uncomment the following lines to enable local storage saving
+/*
+const savedInput = localStorage.getItem('savedInput');
+if (savedInput) {
+    userInput.value = savedInput;
+}
+
+userInput.addEventListener('input', () => {
+    localStorage.setItem('savedInput', userInput.value);
+});
+*/
+
+
+
