@@ -28,6 +28,55 @@
     <div class="container">
         <h1>I Will De-stroy This Website</h1>
     </div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Add any existing styles you have here */
+  
+  /* Style for clock and date */
+  #clock {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+  }
+</style>
+<script>
+function updateClock() {
+  const currentTime = new Date();
+  const options = { timeZone: 'America/Los_Angeles', hour12: false };
+  const pstTime = currentTime.toLocaleTimeString('en-US', options);
+  document.getElementById('clock').textContent = pstTime;
+}
+
+function updateDate() {
+  const currentDate = new Date();
+  const options = { timeZone: 'America/Los_Angeles', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const pstDate = currentDate.toLocaleDateString('en-US', options);
+  document.getElementById('date').textContent = pstDate;
+}
+
+function updateTime() {
+  updateClock();
+  updateDate();
+}
+
+setInterval(updateTime, 1000); // Update every second
+</script>
+</head>
+<body>
+  <!-- Your existing page content here -->
+
+  <!-- Clock and date display -->
+  <div id="clock"></div>
+  <div id="date"></div>
+</body>
+</html>
+
+    
 </body>
 </html>
 
